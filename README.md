@@ -2,10 +2,43 @@
 
 ## 简介
 
-Espeak-ng TTS 是 Chrome 浏览器的 TTS 插件，使用 espeak-ng 作为 TTS 引擎。espeak-ng 运行在用户当前电脑上，响应速度极快，不会泄露用户数据。插件支持多种语言，包括中文、英文、日文、韩文等。插件提供多种音色选项，满足不同用户的需求。插件还支持自定义语速和音量，让用户可以根据自己的喜好进行调整。
+Espeak-ng TTS 是 Chrome 浏览器的 TTS 插件，使用 espeak-ng 作为 TTS 引擎。espeak-ng 运行在用户当前电脑上，响应速度极快，不会泄露用户数据。
 
-## 启动本地API
+## 如何使用
 
+### 安装espeak-ng
+
+In Ubuntu
+```
+sudo apt-get install espeak-ng
+```
+
+In ArchLinux
+```
+sudo pacman -S espeak-ng
+```
+
+### 下载代码
+```
+git clone https://github.com/ChanMo/espeak-ng-tts.git && cd espeak-ng-tts
+```
+### 安装API所需环境
+```
+cd api
+pip install -r requirements.txt
+```
+
+### 启动本地API
+```
+flask run
+```
+
+### 安装Chrome插件
+在Chrome流览器中打开 `chrome://extensions/`, 确保"开发者模式"已开启
+
+点击"加载已解压的扩展程序", 选择`espeak-ng-tts/plugin/`目录
+
+### 完成
 
 ## 贡献指南
 

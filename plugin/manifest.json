@@ -2,9 +2,13 @@
   "name": "ESpeak-NG TTS",
   "description": "ESpeak-NG TTS 是 Chrome 浏览器的 TTS 插件，使用本地 espeak-ng 作为 TTS 引擎",
   "version": "1.0",
-  "permissions": ["ttsEngine"],
+  "permissions": ["ttsEngine", "contextMenus"],
   "author": "chan.mo@outlook.com",
   "manifest_version": 3,
+  "icons": {
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
   "tts_engine": {
     "voices": [
       {
