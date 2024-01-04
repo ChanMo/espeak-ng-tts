@@ -22,15 +22,22 @@ sudo pacman -S espeak-ng
 ```
 git clone https://github.com/ChanMo/espeak-ng-tts.git && cd espeak-ng-tts
 ```
+
 ### 安装API所需环境
 ```
+python -m venv env
+source env/bin/activate
 cd api
-pip install -r requirements.txt
+pip install .
 ```
 
-### 启动本地API
+### 创建Systemctl服务
+修改`tts.service`, 更改`/path/to/your/venv`到正确的路径
 ```
-flask run
+sudo cp tts.service /etc/systemctl/system/
+sudo systemclt daemon-reload
+sudo systemctl enable tts
+sudo systemctl start tts
 ```
 
 ### 安装Chrome插件

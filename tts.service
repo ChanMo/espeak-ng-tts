@@ -1,0 +1,15 @@
+[Unit]
+Description=TTS API Service
+After=network.target
+
+[Service]
+Type=simple
+User=chen
+Group=chen
+ExecStart=/path/to/your/venv/bin/gunicorn -b :5000 tts:app
+ExecReload=/bin/kill -s HUP $MAINPID
+TimeoutSec=120
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
